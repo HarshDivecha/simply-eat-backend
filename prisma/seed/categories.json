@@ -1,0 +1,25 @@
+[
+    {
+        "name": "soups",
+        "menuId": 1
+    },
+    {
+        "name": "appetizers",
+        "menuId": 1
+    },
+    {
+        "name": "thali",
+        "menuId": 2
+    },
+    {
+        "name": "chicken",
+        "menuId": 2
+    },
+    {
+        "name": "indo-chinese",
+        "menuId": 2
+    },
+    {
+        "name": "deerinks"
+    }
+]

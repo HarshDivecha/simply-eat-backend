@@ -1,0 +1,79 @@
+[
+    {
+        "name": "vada",
+        "description": "",
+        "price": 5.00,
+        "qty": 2
+    },
+    
+    {
+        "name": "Lentil",
+        "description": "Traditional Indian style lentil soup",
+        "price": 6,
+        "qty": 1,
+        "categoryId": 1
+    },
+    {
+        "name": "Sambar ",
+        "description": "Vegetable stew made from roasted lentils, carrots, dried red pepper and eggplant",
+        "price": 5.00,
+        "qty": 1,
+        "categoryId": 1
+    },
+    {
+        "name": "Samosa",
+        "description": "Indian patty stuffed with potatoes and peas with various spices",
+        "price": 5.00,
+        "qty": 2,
+        "categoryId": 2
+    },
+    {
+        "name": "Pakora",
+        "description": "Authentic Indian nuggets made with cauliflower and spinach fried in a pea flour batter",
+        "price": 6.00,
+        "qty": 1,
+        "categoryId": 2
+    },
+    {
+        "name": "Non Veg Thali with Lamb Curry",
+        "description": "Platter served with lamb curry and side of vegetables, naan, rice, salad",
+        "price": 16.00,
+        "qty": 1,
+        "categoryId": 3
+    },
+    {
+        "name": "Veg-Thali",
+        "description": "",
+        "price": 11.00,
+        "qty": 1,
+        "categoryId": 3
+    },
+    {
+        "name": "Butter Chicken",
+        "description": "Boneless chicken baked and cooked in a rich butter sauce",
+        "price": 17.00,
+        "qty": 1,
+        "categoryId": 4
+    },
+    {
+        "name": "Schezwan Wings",
+        "description": "",
+        "price": 12.00,
+        "qty": 8,
+        "categoryId": 5
+    },
+    {
+        "name": "Schezwan Wings",
+        "description": "",
+        "price": 20.00,
+        "qty": 16,
+        "categoryId": 5
+    },
+    {
+        "name": "Chili Chicken",
+        "description": "",
+        "price": 13.00,
+        "qty": 1,
+        "categoryId": 5
+    }
+]

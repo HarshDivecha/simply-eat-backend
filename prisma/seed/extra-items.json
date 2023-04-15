@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Vada",
+        "description": "Fried Mashed potatoes", 
+        "price": 1.00,
+        "qty": 1
+    },
+    {
+        "name": "Schezwan Sauce",
+        "description": "Savoury chilli garlic sauce", 
+        "price": 2.00,
+        "qty": 1,
+        "mainItemId": 8
+    },
+    {
+        "name": "corriander", 
+        "price": 0.5,
+        "qty": 1,
+        "description": "",
+        "mainItemId": 1
+    }
+]
