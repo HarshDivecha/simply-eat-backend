@@ -5,8 +5,8 @@ import { PrismaService } from './prisma.service';
 import { MenuModule } from './menu/menu.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController, MenuModule],
+  imports: [MenuModule],
+  controllers: [AppController],
   providers: [AppService, PrismaService],
 })
 export class AppModule {}

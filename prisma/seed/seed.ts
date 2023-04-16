@@ -4,9 +4,9 @@ const prisma = new PrismaClient()
 
 async function resetDb(){
     prisma.menu.deleteMany();
-    prisma.mainItem.deleteMany();
-    prisma.extraItem.deleteMany();
-    prisma.category.deleteMany();
+    // prisma.mainItem.deleteMany();
+    // prisma.extraItem.deleteMany();
+    // prisma.category.deleteMany();
 }
 
 async function seedDb(){
