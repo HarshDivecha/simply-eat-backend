@@ -2,7 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  output = "../node_modules/.prisma/client"
+  output   = "../node_modules/.prisma/client"
   provider = "prisma-client-js"
 }
 
@@ -13,10 +13,53 @@ datasource db {
 }
 
 model Menu {
-  id          Int      @id @default(autoincrement())
+  id          Int        @id @default(autoincrement())
   name        String
   description String?
-  // categories  Category[]
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  categories  Category[]
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
+
+model Category {
+  id        Int      @id @default(autoincrement())
+  name      String
+  mainItems MainItem[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Menu      Menu?    @relation(fields: [menuId], references: [id])
+  menuId    Int?
+
+  @@index([menuId])
+}
+
+model MainItem {
+  id          Int         @id @default(autoincrement())
+  name        String
+  image       String?
+  description String
+  price       Float
+  qty         Int
+  extras      ExtraItem[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  Category    Category?   @relation(fields: [categoryId], references: [id])
+  categoryId  Int?
+
+  @@index([categoryId])
+}
+
+model ExtraItem {
+  id          Int       @id @default(autoincrement())
+  name        String
+  image       String?
+  description String
+  price       Float
+  qty         Int
+  mainItemId  Int?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  MainItem    MainItem? @relation(fields: [mainItemId], references: [id])
+
+  @@index([mainItemId])
 }
