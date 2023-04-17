@@ -8,6 +8,8 @@ export class CategoryService {
 
   // transaction is used for atomicity and consistency
   async createCategories(categories: Prisma.CategoryCreateManyInput[]): Promise<any> {
+    console.log(categories);
+    
     return this.prisma.$transaction(
       categories.map((category) => this.prisma.category.create({ data: category })),
     );
