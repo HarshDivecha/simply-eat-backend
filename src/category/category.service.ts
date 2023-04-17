@@ -10,16 +10,10 @@ export class CategoryService {
   async createCategories(
     categories: Prisma.CategoryCreateManyInput[],
   ): Promise<any> {
-    console.log(categories);
-
-    categories.map(category => {
-      console.log(category);
-      
-    })
-
+  
     return this.prisma.$transaction(
       categories.map((category) =>
-        this.prisma.category.create({ data: category }),
+        this.prisma.category?.create({ data: category }),
       ),
     );
   }
