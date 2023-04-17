@@ -9,8 +9,8 @@
     "seed": "ts-node prisma/seed/seed.ts"
   },
   "scripts": {
-    "build": "tsc",
-    "build-1": "nest build",
+    "build-1": "tsc",
+    "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
