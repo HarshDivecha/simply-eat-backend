@@ -22,8 +22,7 @@ export class MenuController {
 
   @Get() 
   async getAllMenus(): Promise<Menu[]> { 
-    // return this.menuService.getAllMenus();
-    return []
+    return this.menuService.getAllMenus();
   }
 
   @Get('with-categories')
