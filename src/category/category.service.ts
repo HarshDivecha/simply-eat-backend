@@ -4,14 +4,23 @@ import { Category, Prisma } from '@prisma/client';
 
 @Injectable()
 export class CategoryService {
-  constructor(private prisma: PrismaService) { }
+  constructor(private prisma: PrismaService) {}
 
   // transaction is used for atomicity and consistency
-  async createCategories(categories: Prisma.CategoryCreateManyInput[]): Promise<any> {
+  async createCategories(
+    categories: Prisma.CategoryCreateManyInput[],
+  ): Promise<any> {
     console.log(categories);
-    
+
+    categories.map(category => {
+      console.log(category);
+      
+    })
+
     return this.prisma.$transaction(
-      categories.map((category) => this.prisma.category.create({ data: category })),
+      categories.map((category) =>
+        this.prisma.category.create({ data: category }),
+      ),
     );
   }
 
@@ -21,14 +30,14 @@ export class CategoryService {
 
   async getAllCategoriesWithMainItems(): Promise<Category[]> {
     return this.prisma.category.findMany({
-      include: {"mainItems": true}
+      include: { mainItems: true },
     });
   }
 
   async getCategoryById(id: number): Promise<Category | null> {
     return this.prisma.category.findUnique({
       where: { id },
-      include: {"mainItems": true}
+      include: { mainItems: true },
     });
   }
 
@@ -36,16 +45,16 @@ export class CategoryService {
     where: Prisma.CategoryWhereUniqueInput;
     data: Prisma.CategoryUncheckedUpdateInput;
   }): Promise<Category> {
-
     const { where, data } = params;
     return this.prisma.category.update({
       where,
       data,
-    },);
+    });
   }
 
-
-  async deleteCategory(where: Prisma.CategoryWhereUniqueInput): Promise<Category> {
+  async deleteCategory(
+    where: Prisma.CategoryWhereUniqueInput,
+  ): Promise<Category> {
     return this.prisma.category.delete({
       where,
     });
