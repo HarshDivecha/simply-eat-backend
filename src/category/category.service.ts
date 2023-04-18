@@ -13,7 +13,7 @@ export class CategoryService {
   
     return this.prisma.$transaction(
       categories.map((category) =>
-        this.prisma.category?.create({ data: category }),
+        this.prisma.category.create({ data: category }),
       ),
     );
   }
